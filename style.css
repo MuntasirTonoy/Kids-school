@@ -100,6 +100,8 @@ h1 span:nth-child(3) {
 .curriculum {
   margin: 4rem auto;
   background: url(assets/bg.png);
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 .curriculum > h1 {
   text-align: center;
@@ -222,6 +224,79 @@ footer {
   gap: 1rem;
   justify-content: start;
 }
+.stories {
+  padding: 5rem 0;
+  background: linear-gradient(
+      0deg,
+      rgba(254, 163, 1, 0.3) 0%,
+      rgba(255, 255, 255, 0.3) 100%
+    ),
+    url(assets/bg.png);
+  background-size: cover;
+  background-repeat: repeat-y;
+}
+.stories > h1 {
+  text-align: center;
+  color: #000;
+  font-size: 2.8rem;
+  font-weight: 700;
+}
+.stories-flex-container {
+  gap: 1.2rem;
+  justify-content: center;
+  margin: 5rem auto;
+}
+
+.big-story {
+  width: 34rem;
+}
+.big-story p {
+  padding: 1rem 3rem;
+}
+.stories-grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 18rem);
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+}
+.story-box-title {
+  padding: 5rem 0;
+}
+
+.stories-box {
+  border-radius: 1rem;
+  overflow: hidden;
+  background-color: #fff;
+  text-align: center;
+}
+
+.stories-box img {
+  width: 100%;
+  height: auto;
+}
+
+.date {
+  background-color: #665eff;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 1.25rem;
+  font-size: 0.8rem;
+  border: none;
+  position: relative;
+  top: -20px;
+}
+
+.stories-box h1 {
+  font-size: 1.2rem;
+  color: #333;
+  padding: 2rem 3rem;
+  text-align: start;
+}
+.view-all {
+  background-color: black;
+  margin: auto;
+}
 /* mobile responsive */
 @media screen and (max-width: 767px) {
   .nav-links,
@@ -295,5 +370,16 @@ footer {
 
   .second-flex {
     margin: 2rem 0;
+  }
+  .big-story {
+    display: none;
+  }
+  .stories-grid-container {
+    grid-template-columns: repeat(2, 42%);
+    gap: 1rem;
+  }
+  .stories-box h1 {
+    font-size: 0.6rem;
+    padding: 1.2rem;
   }
 }
