@@ -37,6 +37,34 @@ li:hover a {
   text-decoration: underline;
 }
 /* individual codes */
+
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  background-color: var(--blue);
+  color: white;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.marquee p {
+  display: inline-block;
+  animation: scroll 14s linear infinite;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(200%);
+  }
+  to {
+    transform: translateX(-200%);
+  }
+}
 nav {
   margin: 1.75rem auto;
   justify-content: space-around;
