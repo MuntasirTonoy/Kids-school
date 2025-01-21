@@ -31,7 +31,7 @@
   transition: 0.3s ease-in-out;
 }
 .primary-btn:hover {
-  background: gray;
+  background: var(--violet);
 }
 li:hover a {
   text-decoration: underline;
@@ -39,32 +39,31 @@ li:hover a {
 /* individual codes */
 
 .marquee {
-  width: 100%;
+  background: var(--violet);
   overflow: hidden;
-  background-color: var(--blue);
-  color: white;
-  height: 2rem;
+  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .marquee p {
-  display: inline-block;
-  animation: scroll 14s linear infinite;
+  padding: 0.5rem 1rem;
+  color: var(--white);
+  white-space: nowrap;
   font-size: 1rem;
-  font-weight: bold;
-  margin: 0;
+  font-weight: 600;
+  animation: scroll 5s linear infinite;
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
-@keyframes scroll {
-  from {
-    transform: translateX(200%);
-  }
-  to {
-    transform: translateX(-200%);
-  }
-}
 nav {
   margin: 1.75rem auto;
   justify-content: space-around;
@@ -165,6 +164,11 @@ h1 span:nth-child(3) {
   flex-shrink: 0;
   border-radius: 18.864px;
   box-shadow: 0px 0px 28.296px 0.943px rgba(0, 0, 0, 0.05) inset;
+  transition: 0.3s ease-in-out;
+}
+.curriculum-card:hover {
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
+    rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
 }
 .curriculum-card:nth-child(1) {
   border: 0.943px solid #def5ff;
