@@ -434,7 +434,10 @@ footer {
     padding: 4rem 1rem;
   }
   footer h1 {
-    font-size: 2rem;
+    font-size: 1.7rem;
+  }
+  .footer-main h1 {
+    font-size: 1.7rem;
   }
   .footer-main {
     display: flex;
